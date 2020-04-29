@@ -1,0 +1,27 @@
+INPUT
+connect data/demeter.sqlite3
+recipe "Perfect Pot Roast" "Transform inexpensive chuck into fall-apart-tender pot roast with a flavorful broth (that's stocked with red wine, herbs and hearty vegetables)." https://www.foodnetwork.com/recipes/ree-drummond/perfect-pot-roast-recipe-2118771
+ingredient salt seasoning 0.0 null 2
+ingredient "ground black pepper" seasoning 0.0 null 2
+ingredient "chuck roast" meat 3 lbs. 2
+ingredient "olive oil" "fats and oils" 0.0 null 2
+ingredient "onions" vegetable 2 null 2
+ingredient carrots vegetable 6 null 2
+ingredient "beef broth" broth 3 cups 2
+ingredient rosemary herb 2 sprigs 2
+ingredient thyme herb 2 sprigs 2
+category Dinner 2
+OUTPUT
+user database set to data/demeter.sqlite3
+Success! Perfect Pot Roast has been added.
+Success! salt has been added.
+Success! ground black pepper has been added.
+Success! chuck roast has been added.
+Success! olive oil has been added.
+Success! onions has been added.
+Success! carrots has been added.
+Success! beef broth has been added.
+Success! rosemary has been added.
+Success! thyme has been added.
+Success! Dinner has been added.
+END

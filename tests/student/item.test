@@ -1,0 +1,11 @@
+INPUT
+database hello
+register billbluey174 racecar1998 Jonathan
+login billbluey174 racecar1998
+item hi 3 vege 00/00/0000
+OUTPUT
+Success! New database hello has been created and connected
+ERROR:
+Success! Jonathan has been logged in.
+Success! 3 hi have been added to Jonathan's inventory.
+END

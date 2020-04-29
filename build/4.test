@@ -1,0 +1,35 @@
+INPUT
+connect data/demeter.sqlite3
+recipe "Shrimp Scampi with Linguini" "This rich, lemony pasta dish is easy enough to make on a weekday but impressive enough for any special occasion." https://www.foodnetwork.com/recipes/tyler-florence/shrimp-scampi-with-linguini-recipe-1942429
+ingredient linguini pasta 1 lbs. 4
+ingredient butter "fats and oils" .5 stick 4
+ingredient "olive oil" "fats and oils" 0.0 null 4
+ingredient shallots vegetable 2 null 4
+ingredient garlic vegetable 2 cloves 4
+ingredient shrimp seafood 1 lbs. 4
+ingredient salt seasoning 0.0 null 4
+ingredient "ground black pepper" seasoning 0.0 null 4
+ingredient "white wine" alcohol .5 cup 4
+ingredient lemon fruit 1 null 4
+ingredient parsley herb 0.0 null 4
+category Pasta 4
+category Seafood 4
+category Dinner 4
+OUTPUT
+user database set to data/demeter.sqlite3
+Success! Shrimp Scampi with Linguini has been added.
+Success! linguini has been added.
+Success! butter has been added.
+Success! olive oil has been added.
+Success! shallots has been added.
+Success! garlic has been added.
+Success! shrimp has been added.
+Success! salt has been added.
+Success! ground black pepper has been added.
+Success! white wine has been added.
+Success! lemon has been added.
+Success! parsley has been added.
+Success! Pasta has been added.
+Success! Seafood has been added.
+Success! Dinner has been added.
+END

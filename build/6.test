@@ -1,0 +1,39 @@
+INPUT
+connect data/demeter.sqlite3
+recipe "Sheet Pan Chicken Fajitas" "These protein-packed fajitas cleverly use a foil-lined baking sheet and broiler to make quick work out of dinner. Bonus: easy cleanup!" https://www.foodnetwork.com/recipes/food-network-kitchen/sheet-pan-chicken-fajitas-3680272
+ingredient "chili powder" seasoning 0.0 null 6
+ingredient salt seasoning 0.0 null 6
+ingredient "ground black pepper" seasoning 0.0 null 6
+ingredient "baby bell peppers" vegetable 12 null 6
+ingredient "yellow onions" vegetable 1 null 6
+ingredient "olive oil" "fats and oils" 0.0 null 6
+ingredient "chicken breast" poultry 1.5 lbs. 6
+ingredient limes fruit 2 null 6
+ingredient "flour tortillas" grain 8 null 6
+ingredient "Monterey jack cheese" topping 0.0 null 6
+ingredient guacamole topping 0.0 null 6
+ingredient "hot sauce" topping 0.0 null 6
+ingredient salsa topping 0.0 null 6
+ingredient "sour cream" topping 0.0 null 6
+category Mexican 6
+category Dinner 6
+OUTPUT
+user database set to data/demeter.sqlite3
+Success! Sheet Pan Chicken Fajitas has been added.
+Success! chili powder has been added.
+Success! salt has been added.
+Success! ground black pepper has been added.
+Success! baby bell peppers has been added.
+Success! yellow onions has been added.
+Success! olive oil has been added.
+Success! chicken breast has been added.
+Success! limes has been added.
+Success! flour tortillas has been added.
+Success! Monterey jack cheese has been added.
+Success! guacamole has been added.
+Success! hot sauce has been added.
+Success! salsa has been added.
+Success! sour cream has been added.
+Success! Mexican has been added.
+Success! Dinner has been added.
+END

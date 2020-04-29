@@ -1,0 +1,27 @@
+INPUT
+connect data/demeter.sqlite3
+recipe "Peanut Butter-Chocolate No-Bake Cookies" "What could be better than an indulgent dessert made from ingredients you have sitting in your pantry? These cookies take just minutes of work; most of the time is spent waiting for them to harden into the rich, nutty, chocolaty delights that they are." https://www.foodnetwork.com/recipes/food-network-kitchen/peanut-butter-chocolate-no-bake-cookies-recipe-2015085
+ingredient sugar cooking 0.0 null 5
+ingredient milk dairy .0313 gallons 5
+ingredient "unsalted butter" "fats and oils" 1 stick 5
+ingredient "unsweetened cocoa powder" baking .25 cups 5
+ingredient "rolled oats" grain 3 cups 5
+ingredient "peanut butter" protein 1 cups 5
+ingredient "vanilla extract" cooking 0.0 null 5
+ingredient salt seasoning 0.0 null 5
+category Dessert 5
+category Sweet 5
+OUTPUT
+user database set to data/demeter.sqlite3
+Success! Peanut Butter-Chocolate No-Bake Cookies has been added.
+Success! sugar has been added.
+Success! milk has been added.
+Success! unsalted butter has been added.
+Success! unsweetened cocoa powder has been added.
+Success! rolled oats has been added.
+Success! peanut butter has been added.
+Success! vanilla extract has been added.
+Success! salt has been added.
+Success! Dessert has been added.
+Success! Sweet has been added.
+END

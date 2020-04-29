@@ -1,0 +1,31 @@
+INPUT
+connect data/demeter.sqlite3
+recipe "Scallops Provencal" "A plateful of buttery scallops proves seasoning and lemon juice are enough to elevate any meal." https://www.foodnetwork.com/recipes/ina-garten/scallops-provencal-recipe-1948016
+ingredient scallops seafood 1 lbs. 1
+ingredient salt seasoning 0.0 null 1
+ingredient "ground black pepper" seasoning 0.0 null 1
+ingredient flour cooking 0.0 null 1
+ingredient "unsalted butter" "fats and oils" .5 stick 1
+ingredient shallots vegetable 2 null 1
+ingredient garlic vegetable 1 clove 1
+ingredient parsley herb 0.0 null 1
+ingredient "white wine" alcohol .33 cup 1
+ingredient lemon fruit 1 null 1
+category Seafood 1
+category Appetizer 1
+OUTPUT
+user database set to data/demeter.sqlite3
+Success! Scallops Provencal has been added.
+Success! scallops has been added.
+Success! salt has been added.
+Success! ground black pepper has been added.
+Success! flour has been added.
+Success! unsalted butter has been added.
+Success! shallots has been added.
+Success! garlic has been added.
+Success! parsley has been added.
+Success! white wine has been added.
+Success! lemon has been added.
+Success! Seafood has been added.
+Success! Appetizer has been added.
+END
