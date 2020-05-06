@@ -1,0 +1,29 @@
+INPUT
+connect data/demeter.sqlite3
+recipe "Banana Walnut Bread" "When you're looking for a weekend baking project, make banana walnut bread — it's the perfect treat in the morning alongside your cup of coffee." https://www.foodnetwork.com/recipes/food-network-kitchen/banana-walnut-bread-recipe-2011439
+ingredient flour cooking 0.0 null 7
+ingredient "baking soda" cooking 0.0 null 7
+ingredient salt seasoning 0.0 null 7
+ingredient eggs protein 2 null 7
+ingredient "vanilla extract" cooking 0.0 null 7
+ingredient "unsalted butter" "fats and oils" 1 sticks 7
+ingredient sugar cooking 0.0 null 7
+ingredient bananas fruit 3 null 7
+ingredient walnuts nuts 4 ozs. 7
+category Dessert 7
+category Baking 7
+OUTPUT
+user database set to data/demeter.sqlite3
+Success! Banana Walnut Bread has been added.
+Success! flour has been added.
+Success! baking soda has been added.
+Success! salt has been added.
+Success! eggs has been added.
+Success! vanilla extract has been added.
+Success! unsalted butter has been added.
+Success! sugar has been added.
+Success! bananas has been added.
+Success! walnuts has been added.
+Success! Dessert has been added.
+Success! Baking has been added.
+END

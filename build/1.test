@@ -5,12 +5,12 @@ ingredient scallops seafood 1 lbs. 1
 ingredient salt seasoning 0.0 null 1
 ingredient "ground black pepper" seasoning 0.0 null 1
 ingredient flour cooking 0.0 null 1
-ingredient "unsalted butter" "fats and oils" .5 stick 1
+ingredient "unsalted butter" "fats and oils" .5 sticks 1
 ingredient shallots vegetable 2 null 1
-ingredient garlic vegetable 1 clove 1
+ingredient garlic vegetable 1 cloves 1
 ingredient parsley herb 0.0 null 1
-ingredient "white wine" alcohol .33 cup 1
-ingredient lemon fruit 1 null 1
+ingredient "white wine" alcohol .33 cups 1
+ingredient lemons fruit 1 null 1
 category Seafood 1
 category Appetizer 1
 OUTPUT
@@ -25,7 +25,7 @@ Success! shallots has been added.
 Success! garlic has been added.
 Success! parsley has been added.
 Success! white wine has been added.
-Success! lemon has been added.
+Success! lemons has been added.
 Success! Seafood has been added.
 Success! Appetizer has been added.
 END

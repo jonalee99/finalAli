@@ -1,0 +1,27 @@
+INPUT
+connect data/demeter.sqlite3
+recipe "Broccoli Salad" "Get your greens in — and love it! Trisha's broccoli salad includes bits of bacon and sunflower kernals for a nice, salty crunch." https://www.foodnetwork.com/recipes/trisha-yearwood/broccoli-salad-2065359
+ingredient bacon meat 8.0 ozs. 9
+ingredient salt seasoning 0.0 null 9
+ingredient "broccoli florets" vegetable 5.0 cups 9
+ingredient "mayonnaise" condiments 1.0 cups 9
+ingredient "cider vinegar" dressing .5 ozs. 9
+ingredient onions vegetable .5 null 9
+ingredient sugar cooking 0.0 null 9
+ingredient raisins fruit 6 ozs. 9
+ingredient "sunflower kernels" seed 4 ozs. 9
+category Salad 9
+OUTPUT
+user database set to data/demeter.sqlite3
+Success! Broccoli Salad has been added.
+Success! bacon has been added.
+Success! salt has been added.
+Success! broccoli florets has been added.
+Success! mayonnaise has been added.
+Success! cider vinegar has been added.
+Success! onions has been added.
+Success! sugar has been added.
+Success! raisins has been added.
+Success! sunflower kernels has been added.
+Success! Salad has been added.
+END

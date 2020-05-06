@@ -6,6 +6,9 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
 import edu.brown.cs.student.login.LoginCommands;
+import edu.brown.cs.student.recipe.RecipeCommands;
+import edu.brown.cs.student.user.UserCommands;
+import edu.brown.cs.student.database.DatabaseCommands;
 
 /**
  * This class handles getting user input and sending it to the command manager.
@@ -17,7 +20,6 @@ public class Repl {
   private CommandManager commandManager;
   private PrintWriter printWriter;
   private BufferedReader bufferedReader;
-  private LoginCommands loginCommands;
 
   /**
    * Instantiates instance variables.
@@ -28,11 +30,17 @@ public class Repl {
     // The printwriter flushes automatically to System.out
     this.commandManager = new CommandManager();
     this.printWriter = new PrintWriter(System.out, true);
-    this.loginCommands = new LoginCommands(commandManager);
+
+    // Register the commands
+    new LoginCommands(commandManager);
+    new RecipeCommands(commandManager);
+    new UserCommands(commandManager);
+    new DatabaseCommands(commandManager);
   }
 
   /**
    * Getter for command manager.
+   * @return commandManager
    */
   public CommandManager getCommandManager() {
     return this.commandManager;

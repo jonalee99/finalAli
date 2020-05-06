@@ -27,26 +27,30 @@
 
   
 
-  
-
 	<div class="limiter">
-    <div id='cssmenu'>
-      <ul>
-        <li class='active'><a href='/demeter/home'>Home</a></li>
-        <li><a href='/demeter/inventory'>Inventory</a></li>
-        <li><a href='/demeter/recipe'>Recipes</a></li>
-        <li><a href='/demeter/login'>Log In</a></li>
-        <li><a href='/demeter/register'>Register</a></li>
-      </ul>
-    </div>
+		<header class="user__header">
+      <div id='cssmenu'>
+        <ul id='bar'>
+          <li class='active'><a href='/demeter/home'>Expiry Sort</a></li>
+          <li><a href='/demeter/recipe'>Category Sort</a></li>
+          <li><a href='/demeter/inventory'>Inventory</a></li>
+          <li><a href='/demeter/additem'>Add Item</a></li>
+          <li><a href='/demeter/login'>Log In</a></li>
+          <li><a href='/demeter/register'>Register</a></li>
+        </ul>
+      </div>
+
+
+    <h1 class="user__title">Expiry Sort</h1>
+    <br>
+      <h2 class="caption">These recipes use foods that are expiring soon</h2>
+
+		</header>
+
+
 		<div class="container-table100">
-      
 			<div class="wrap-table100">
         <div class="user1">
-          <header class="user__header">
-            <img src="../photo/cook.svg" alt="" />
-            <h1 class="user__title">Home</h1>
-          </header>
         </div>
 				<div class="table100 ver1">
 					<div class="table100-firstcol">

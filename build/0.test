@@ -2,10 +2,10 @@ INPUT
 database demeter
 register smasto bearnecessities Sam
 login smasto bearnecessities
-item 1 lbs. seafood 04/20/2020 scallops
-item 1 clove vegetable 04/22/2020 garlic
-item 1 cups protein 04/29/2020 "peanut butter"
-item 1 lbs. seafood 05/02/2020 shrimp
+item 1 lbs. seafood 20/04/2020 scallops
+item 1 cloves vegetable 22/04/2020 garlic
+item 1 cups protein 29/04/2020 "peanut butter"
+item 1 lbs. seafood 02/05/2020 shrimp
 item 1 lbs. pasta 05/05/2020 linguini
 item 0.5 stick "fats and oils" 05/05/2020 butter
 OUTPUT

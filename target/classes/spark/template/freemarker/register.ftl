@@ -8,22 +8,26 @@
 </head>
 
 <body>
+<header class="user__header">
 
   <div id='cssmenu'>
-    <ul>
-      <li><a href='/demeter/home'>Home</a></li>
+    <ul id='bar'>      <li><a href='/demeter/home'>Expiry Sort</a></li>
+      <li><a href='/demeter/recipe'>Category Sort</a></li>
       <li><a href='/demeter/inventory'>Inventory</a></li>
-      <li><a href='/demeter/recipe'>Recipes</a></li>
+      <li><a href='/demeter/additem'>Add Item</a></li>
       <li><a href='/demeter/login'>Log In</a></li>
       <li class='active'><a href='/demeter/register'>Register</a></li>
     </ul>
   </div>
 
+
+  <h1 class="user__title">Demeter</h1>
+  <h2 class="caption">The Pantry Management App</h2>
+</header>
+
   <div class="user">
-    <header class="user__header">
-      <img src="../photo/cook.svg" alt="" />
-      <h1 class="user__title">Welcome to Demeter</h1>
-    </header>
+
+    <h1 class="sign_in">Register</h1>
 
     <form class="form">
       <div class="form__group">

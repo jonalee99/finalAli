@@ -37,8 +37,14 @@ $(document).ready(() => {
 
     $.post("/demeter/login", getParameters, response => {
 
-      const parsed = JSON.parse(response).content;
-      message.html(parsed);
+      const parsed = JSON.parse(response);
+      console.log(parsed);
+
+      message.html(parsed[1]);
+
+      const welcome = document.getElementById("welcomeName");
+      welcome.innerHTML = "Welcome: " + parsed[0];
+
     });
   });
 });

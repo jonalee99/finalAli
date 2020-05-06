@@ -48,6 +48,7 @@ public class CommandManager {
    *
    * @param line        This is the command
    * @param printWriter This is where the output is sent to
+   * @param gui         This is the gui
    */
   public void process(String line, PrintWriter printWriter, Boolean gui) {
 
@@ -88,6 +89,7 @@ public class CommandManager {
      *
      * @param tokens These are the parameters
      * @param pw     This is where the output goes
+     * @param gui    This is the gui
      */
     void execute(String tokens, PrintWriter pw, Boolean gui);
   }

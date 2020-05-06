@@ -4,11 +4,11 @@ recipe "French Toast" "Enjoy Sunday morning French toast any day of the week wit
 ingredient cinnamon spice 0.0 null 3
 ingredient nutmeg spice 0.0 null 3
 ingredient sugar cooking 0.0 null 3
-ingredient butter "fats and oils" .5 stick 3
+ingredient butter "fats and oils" .5 sticks 3
 ingredient eggs protein 4 null 3
-ingredient milk dairy .25 cup 3
+ingredient milk dairy .25 cups 3
 ingredient "vanilla extract" cooking 0.0 null 3
-ingredient bread grain .5 loaf 3
+ingredient bread grain .5 loaves 3
 ingredient "maple syrup" topping 0.0 null 3
 category Breakfast 3
 OUTPUT

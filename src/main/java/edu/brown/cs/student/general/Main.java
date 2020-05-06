@@ -4,8 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 import joptsimple.OptionParser;
@@ -79,11 +77,13 @@ public final class Main {
     FreeMarkerEngine freeMarker = createEngine();
 
     // These load the pages
+    Spark.get("/demeter", new LoginHandler(), freeMarker);
     Spark.get("/demeter/register", new RegisterHandler(), freeMarker);
     Spark.get("/demeter/login", new LoginHandler(), freeMarker);
     Spark.get("/demeter/inventory", new InventoryHandler(), freeMarker);
     Spark.get("/demeter/recipe", new RecipesHandler(), freeMarker);
     Spark.get("/demeter/home", new HomeHandler(), freeMarker);
+    Spark.get("/demeter/additem", new AddHandler(), freeMarker);
 
     // These are post requests
     Spark.post("/demeter/register", new RegisterPost());
@@ -92,17 +92,13 @@ public final class Main {
     Spark.post("/demeter/recipe/:category", new RecipePost());
     Spark.post("/demeter/home", new HomePost());
     Spark.post("/dropdown", new DropdownPost());
-  }
-
-  /**
-   * Handle requests to the front page of our Stars website.
-   *
-   */
-  private static class FrontHandler implements TemplateViewRoute {
-    @Override
-    public ModelAndView handle(Request req, Response res) {
-      return new ModelAndView(null, "register.ftl");
-    }
+    Spark.post("/demeter/foodCategory", new FoodCategoryPost());
+    Spark.post("/demeter/food/:food", new CategoryFoodPost());
+    Spark.post("/demeter/units/:food", new UnitPost());
+    Spark.post("/demeter/add", new AddPost());
+    Spark.post("/demeter/delete", new DeletePost());
+    Spark.post("/demeter/user", new UserPost());
+    Spark.post("/demeter/logout", new LogoutPost());
   }
 
   /**
@@ -126,7 +122,7 @@ public final class Main {
   /**
    * This method inputs the command to the repl and returns the output as a
    * String.
-   * 
+   *
    * @param command line input
    * @return string output
    */
@@ -145,7 +141,7 @@ public final class Main {
   }
 
   /**
-   * This is the post request for register
+   * This is the post request for register.
    */
   private class RegisterPost implements Route {
 
@@ -160,7 +156,8 @@ public final class Main {
 
       // If the username or password has spaces
       if (username.split(" ").length != 1 || password.split(" ").length != 1) {
-        Map<String, Object> variables = ImmutableMap.of("content", "Username and Password " + "cannot contain spaces");
+        Map<String, Object> variables = ImmutableMap.of("content",
+            "Username and Password " + "cannot contain spaces");
         return GSON.toJson(variables);
       }
 
@@ -177,7 +174,7 @@ public final class Main {
   }
 
   /**
-   * This is the post request for login
+   * This is the post request for login.
    */
   private class LoginPost implements Route {
 
@@ -191,24 +188,21 @@ public final class Main {
 
       // If the username or password has spaces
       if (username.split(" ").length != 1 || password.split(" ").length != 1) {
-        Map<String, Object> variables = ImmutableMap.of("content", "Username and Password " + "cannot contain spaces");
+        Map<String, Object> variables = ImmutableMap.of("content",
+            "Username and Password " + "cannot contain spaces");
         return GSON.toJson(variables);
       }
 
       // Create the command
       String commandString = "login " + username + " " + password;
 
-      // Input the command and get the output
-      String stringOutput = enterCommand(commandString);
-
       // Return the map
-      Map<String, Object> variables = ImmutableMap.of("content", stringOutput);
-      return GSON.toJson(variables);
+      return enterCommand(commandString);
     }
   }
 
   /**
-   * This is the post request for login
+   * This is the post request for login.
    */
   private class InventoryPost implements Route {
 
@@ -219,7 +213,7 @@ public final class Main {
   }
 
   /**
-   * This is the post request for recipe
+   * This is the post request for recipe.
    */
   private class RecipePost implements Route {
 
@@ -231,7 +225,7 @@ public final class Main {
   }
 
   /**
-   * This is the post request for home
+   * This is the post request for home.
    */
   private class HomePost implements Route {
 
@@ -242,7 +236,7 @@ public final class Main {
   }
 
   /**
-   * This is the post request for cuisine
+   * This is the post request for cuisine.
    */
   private class DropdownPost implements Route {
 
@@ -253,7 +247,100 @@ public final class Main {
   }
 
   /**
-   * Loads the registration page
+   * This is the post request for food category.
+   */
+  private class FoodCategoryPost implements Route {
+
+    @Override
+    public Object handle(Request request, Response response) throws Exception {
+      return enterCommand("types go");
+    }
+  }
+
+  /**
+   * This is the post request for food.
+   */
+  private class CategoryFoodPost implements Route {
+    @Override
+    public Object handle(Request request, Response response) throws Exception {
+      String category = request.params(":food");
+      return enterCommand("fot " + category);
+    }
+  }
+
+  /**
+   * This is the post request for food.
+   */
+  private class UnitPost implements Route {
+    @Override
+    public Object handle(Request request, Response response) throws Exception {
+      String category = request.params(":food");
+      return enterCommand("units " + category);
+    }
+  }
+
+  /**
+   * This is the post request for add.
+   */
+  private class AddPost implements Route {
+    @Override
+    public Object handle(Request request, Response response) throws Exception {
+
+      // Receives the parameters
+      QueryParamsMap qm = request.queryMap();
+      String item = qm.value("name");
+      String quantity = qm.value("quantity");
+      String units = qm.value("units");
+      String expiration = qm.value("expiration");
+      String type = qm.value("type");
+
+      String command = "item " + quantity + " " + units
+          + " " + type + " " + expiration + " " + item;
+
+      return GSON.toJson(enterCommand(command));
+    }
+  }
+
+  /**
+   * This is the post request for delete.
+   */
+  private class DeletePost implements Route {
+    @Override
+    public Object handle(Request request, Response response) throws Exception {
+
+      // Receives the parameters
+      QueryParamsMap qm = request.queryMap();
+      String item = qm.value("id");
+      String quantity = qm.value("quantity");
+
+      String command = "delete " + item + " " + quantity;
+
+      return GSON.toJson(enterCommand(command));
+    }
+  }
+
+  /**
+   * This is the post request for the logged in user.
+   */
+  private class UserPost implements Route {
+    @Override
+    public Object handle(Request request, Response response) throws Exception {
+      return GSON.toJson(enterCommand("user"));
+    }
+  }
+
+  /**
+   * This is the post request to logout a user.
+   */
+  private class LogoutPost implements Route {
+    @Override
+    public Object handle(Request request, Response response) throws Exception {
+      return GSON.toJson(enterCommand("logout"));
+    }
+  }
+
+  /**
+   * Loads the registration page.
    *
    */
   private static class RegisterHandler implements TemplateViewRoute {
@@ -264,7 +351,7 @@ public final class Main {
   }
 
   /**
-   * Loads the login page
+   * Loads the login page.
    */
   private class LoginHandler implements TemplateViewRoute {
 
@@ -275,7 +362,7 @@ public final class Main {
   }
 
   /**
-   * Loads the inventory page
+   * Loads the inventory page.
    */
   private class InventoryHandler implements TemplateViewRoute {
 
@@ -286,7 +373,7 @@ public final class Main {
   }
 
   /**
-   * Loads the recipes page
+   * Loads the recipes page.
    */
   private class RecipesHandler implements TemplateViewRoute {
 
@@ -297,13 +384,24 @@ public final class Main {
   }
 
   /**
-   * Loads the home page
+   * Loads the home page.
    */
   private class HomeHandler implements TemplateViewRoute {
 
     @Override
     public ModelAndView handle(Request req, Response res) {
       return new ModelAndView(null, "/home.ftl");
+    }
+  }
+
+  /**
+   * Loads Add Item page.
+   */
+  private class AddHandler implements TemplateViewRoute {
+
+    @Override
+    public ModelAndView handle(Request req, Response res) {
+      return new ModelAndView(null, "/additem.ftl");
     }
   }
 }

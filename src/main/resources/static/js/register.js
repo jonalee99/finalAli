@@ -8,7 +8,7 @@ $(document).ready(() => {
   const inputButton = $("#registerButton");
   const username = $("#username");
   const password = $("#password");
-  const name = $("#name"); 
+  const name = $("#name");
   const message = $("#messageText");
 
   // Enters on enter keypress
@@ -47,6 +47,7 @@ $(document).ready(() => {
 
       const parsed = JSON.parse(response).content;
       message.html(parsed);
+      
     });
   });
 });

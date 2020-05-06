@@ -8,10 +8,12 @@
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/main.css">
   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-  <title>CSS MenuMaker</title>
+  <title>Demeter</title>
+  <link rel="icon" href="/images/favicon.ico">
 </head>
 
 <body>
   ${content}
+  <script src="../js/main.js"></script>
 </body>
 <html>

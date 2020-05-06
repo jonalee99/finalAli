@@ -1,0 +1,19 @@
+INPUT
+connect data/demeter.sqlite3
+recipe "5-Ingredient Instant Pot Mac and Cheese" "We love multi-purpose kitchen gadgets that make life easier, so that's why the Instant Pot (a slow cooker, pressure cooker and stove-top stand-in, all in one) is a go-to for quick meals. Especially this creamy kid-friendly mac and cheese, which cooks up in no time. And after it's been gobbled up, you'll only have one pot to clean!" https://www.foodnetwork.com/recipes/food-network-kitchen/5-ingredient-instant-pot-mac-and-cheese-3649854
+ingredient macaroni pasta 1.0 lbs. 8
+ingredient salt seasoning 0.0 null 8
+ingredient "evaporated milk" dairy 12 ozs. 8
+ingredient "unsalted butter" "fats and oils" .5 sticks 8
+ingredient "shredded cheddar" dairy 24 ozs. 8
+category Pasta 8
+OUTPUT
+user database set to data/demeter.sqlite3
+Success! 5-Ingredient Instant Pot Mac and Cheese has been added.
+Success! macaroni has been added.
+Success! salt has been added.
+Success! evaporated milk has been added.
+Success! unsalted butter has been added.
+Success! shredded cheddar has been added.
+Success! Pasta has been added.
+END

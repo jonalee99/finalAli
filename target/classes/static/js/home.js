@@ -25,7 +25,7 @@
 })(jQuery);
 
 // This function is run on the load of the webpage
-window.onload = function() {
+function load() {
 
   // Gets the first column
   const firstColumn = document.getElementById("firstColumn");
@@ -56,9 +56,13 @@ window.onload = function() {
       firstColumn.appendChild(tree);
 
       // Input the other columns
-      const typeTd = this.document.createElement("td");
+      const innerDiv = document.createElement("div");
+      innerDiv.className = "column2_div";
+      innerDiv.innerHTML = type;
+
+      const typeTd = document.createElement("td");
       typeTd.className = "cell100 column2";
-      typeTd.innerHTML = type;
+      typeTd.appendChild(innerDiv);
 
       const restTr = this.document.createElement("tr");
       restTr.className = "row100 body";

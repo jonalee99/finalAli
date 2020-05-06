@@ -28,23 +28,26 @@
   
 	
 	<div class="limiter">
-    <div id='cssmenu'>
-      <ul>
-        <li><a href='/demeter/home'>Home</a></li>
-        <li class='active'><a href='/demeter/inventory'>Inventory</a></li>
-        <li><a href='/demeter/recipe'>Recipes</a></li>
-        <li><a href='/demeter/login'>Log In</a></li>
-        <li><a href='/demeter/register'>Register</a></li>
-      </ul>
-    </div>
+		<header class="user__header">
+      <div id='cssmenu'>
+        <ul id="bar">
+          <li><a href='/demeter/home'>Expiry Sort</a></li>
+          <li><a href='/demeter/recipe'>Category Sort</a></li>
+          <li class='active'><a href='/demeter/inventory'>Inventory</a></li>
+          <li><a href='/demeter/additem'>Add Item</a></li>
+          <li><a href='/demeter/login'>Log In</a></li>
+          <li><a href='/demeter/register'>Register</a></li>
+        </ul>
+      </div>
+			<h1 class="user__title">Inventory</h1>
+		</header>
 		<div class="container-table100">
       
 			<div class="wrap-table100">
         <div class="user1">
-          <header class="user__header">
-            <img src="../photo/cook.svg" alt="" />
-            <h1 class="user__title">Inventory</h1>
-          </header>
+
+
+
         </div>
 				<div class="table100 ver1">
 					<div class="table100-firstcol">
